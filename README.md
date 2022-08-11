@@ -8,12 +8,14 @@ For example:
 
 ![example Binary Tree](https://github.com/danielforkner/Sum-of-BT-Branches-Right-to-Left/blob/main/example%20tree.png)
 
-The return sumArray should be `[ 17, 12, 8, 20, 21 ]`
-17 == 1 + 7 + 9
-12 == 1 + 7 + 4
- 8 == 1 + 2 + 5
-20 == 1 + 2 + 6 + 11
-20 == 1 + 2 + 6 + 12
+The return sumArray should be [ 17, 12, 8, 20, 21 ]
+```
+// 17 == 1 + 7 + 9
+// 12 == 1 + 7 + 4
+//  8 == 1 + 2 + 5
+// 20 == 1 + 2 + 6 + 11
+// 20 == 1 + 2 + 6 + 12
+```
 
 ## Code Provided
 
