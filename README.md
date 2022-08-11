@@ -88,5 +88,5 @@ function sumHelper(node, currentSum, sumArray) {
 ```
 
 ## Big O
-O(n) time - the function must visit every node in the binary tree to return the sums
-O(n) space - the function traverses the binary tree in place
+- O(n) time - the function must visit every node in the binary tree to return the sums
+- O(n) space - the function traverses the binary tree in place
