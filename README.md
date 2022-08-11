@@ -44,3 +44,22 @@ function sumBranches() {
   // your code here
 }
 ```
+
+## Solutions
+
+Solution 1, with default values:
+```
+function sumBranches(root, sumArray = [], currentSum = 0) {
+  if (root === null) return;
+
+  currentSum += root.value;
+  if (root.left === null && root.right === null) {
+    sumArray.push(currentSum);
+    return sumArray;
+  }
+  sumBranches(root.right, sumArray, currentSum);
+  sumBranches(root.left, sumArray, currentSum);
+
+  return sumArray;
+}
+```
