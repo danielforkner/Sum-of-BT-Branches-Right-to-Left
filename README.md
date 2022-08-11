@@ -17,7 +17,7 @@ The return sumArray should be [ 17, 12, 8, 20, 21 ]
 // 20 == 1 + 2 + 6 + 12
 ```
 
-## Code Provided
+## Starter Code
 
 Provide the following code:
 
@@ -30,16 +30,17 @@ class BinaryTree {
   }
 }
 
-const tree = new BinaryTree(1);
-tree.left = new BinaryTree(2);
-tree.left.left = new BinaryTree(6);
-tree.left.left.left = new BinaryTree(12);
-tree.left.left.right = new BinaryTree(11);
-tree.left.right = new BinaryTree(5);
-tree.right = new BinaryTree(7);
-tree.right.left = new BinaryTree(4);
-tree.right.right = new BinaryTree(9);
+const root = new BinaryTree(1);
+root.left = new BinaryTree(2);
+root.left.left = new BinaryTree(6);
+root.left.left.left = new BinaryTree(12);
+root.left.left.right = new BinaryTree(11);
+root.left.right = new BinaryTree(5);
+root.right = new BinaryTree(7);
+root.right.left = new BinaryTree(4);
+root.right.right = new BinaryTree(9);
 
+// Pass in `root` to the following function and write the logic to sum the branches right to left
 function sumBranches() {
   // your code here
 }
@@ -63,3 +64,29 @@ function sumBranches(root, sumArray = [], currentSum = 0) {
   return sumArray;
 }
 ```
+
+Solution 2
+```
+function sumBranches(root) {
+  const sumArray = [];
+  sumHelper(root, 0, sumArray);
+  return sumArray;
+}
+
+function sumHelper(node, currentSum, sumArray) {
+  if (node === null) return;
+  
+  currentSum = currentSum + node.value;
+  if (!node.left && !node.right) {
+    sumArray.push(currentSum);
+    return;
+  }
+  
+  sumHelper(node.right, currentSum, sumArray);
+  sumHelper(node.left, currentSum, sumArray);
+}
+```
+
+## Big O
+O(n) time - the function must visit every node in the binary tree to return the sums
+O(n) space - the function traverses the binary tree in place
