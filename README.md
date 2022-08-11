@@ -6,4 +6,4 @@ Write a function that receives a binary tree and returns an array of the sum of 
 
 For example: 
 
-![example Binary Tree]()
+![example Binary Tree](https://github.com/danielforkner/Sum-of-BT-Branches-Right-to-Left/blob/main/example%20tree.png)
